@@ -115,10 +115,10 @@ extension PromotionsPresenter: PromotionsPresenterProtocol{
         let chooseButtonTitle: String
         
         if interactor.isAnyPromotionChoosed() {
-            guard let choosedTitle = interactor.getChoosedPromotionButton() else { return }
+            guard let choosedTitle = interactor.getNotChoosedButtonTitle() else { return }
             chooseButtonTitle = choosedTitle
         } else {
-            guard let notChoosedTitle = interactor.getNotChoosedButtonTitle() else { return }
+            guard let notChoosedTitle = interactor.getChoosedPromotionButton()else { return }
             chooseButtonTitle = notChoosedTitle
         }
         
