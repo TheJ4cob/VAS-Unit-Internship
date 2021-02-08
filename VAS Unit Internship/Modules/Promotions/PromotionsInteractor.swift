@@ -126,12 +126,12 @@ extension PromotionsInteractor: PromotionsInteractorProtocol{
     
     // Метод получения Title для кнопки выбора, если действие не выбрано
     func getNotChoosedButtonTitle() -> String? {
-        return promotions?.actionTitle
+        return promotions?.selectedActionTitle
     }
     
     // Метод получения Title для кнопки, если действие выбрано
     func getChoosedPromotionButton() -> String? {
-        return promotions?.selectedActionTitle
+        return promotions?.actionTitle
     }
     
     // Метод получения Title от выбранного Promotion
